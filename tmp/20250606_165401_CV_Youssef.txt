@@ -1,0 +1,193 @@
+%-------------------------
+% ATS-friendly Résumé (LaTeX)
+% Author : Y. Mahfoud
+%-------------------------
+
+\pdfminorversion=4
+\pdfobjcompresslevel=0
+\pdfcompresslevel=9
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}      % liens désactivés, mais URL affichées
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+\definecolor{darkblue}{RGB}{0,70,140}
+
+\geometry{left=1.4cm,top=0.8cm,right=1.2cm,bottom=1cm}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\onehalfspacing            % meilleure lisibilité + extraction texte
+
+\titleformat{\section}{\large\scshape\raggedright\color{black}}
+  {}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\tcbset{
+  frame code={},
+  center title,
+  left=0pt,right=0pt,top=0pt,bottom=0pt,
+  colback=gray!20,colframe=white,
+  width=\dimexpr\textwidth\relax,
+  arc=0pt,outer arc=0pt,boxsep=4pt,
+}
+
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\cvsection}[1]{\vspace{2mm}\begin{tcolorbox}\textbf{\large #1}\end{tcolorbox}\vspace{-4mm}}
+
+\begin{document}
+\raggedright
+\small                           % police 10 pt
+
+%----------- En-tête ----------
+{\LARGE\textbf{Youssef MAHFOUD}}\\
+Double Diplômé : Génie Industriel, IA \& Data Science / Master Informatique SIIA\\[2mm]
+
+\textbf{Phone:} +33 7 45 50 23 49 - 
+\textbf{Email:} youssef.mahfoud@imt-atlantique.net -  
+\textbf{LinkedIn:} \textcolor{darkblue}{youssef-mahfoud-b213381b3}
+Massy (91300), France\\[2mm]
+
+%----------- Résumé ----------
+Ingénieur industriel/IA et logiciel doté d'une solide expertise en développement de pipelines de données et en implémentation d'algorithmes innovants, je mets à profit mes compétences en Python, C++ et en frameworks d'IA pour résoudre des problématiques complexes. Je recherche un poste à temps plein (CDI ou CDD à partir de septembre/octobre) et je suis reconnu pour ma rapidité d'apprentissage et ma forte intuition, atouts majeurs pour mener à bien des projets ambitieux dans un environnement technique exigeant.
+
+%----------- Formation ----------
+\cvsection{Formation Académique / Education}
+\begin{itemize}[leftmargin=*]
+  \resumeItem{\textbf{M2 Informatique – Systèmes Interactifs, Intelligents et Autonomes}
+  \hfill \textit{Brest | Sept 2024 – Août 2025}\\
+  \textcolor{darkblue}{IMT-Atlantique, Bretagne INP - ENIB, UBO, ENSTA}\\
+  \textbf{Cours :} Deep Learning, Transformers, Vision-Guided Manipulation \& Grasping, Robot Operating System (ROS), Project Management \& Teamwork, Human-in-the-Loop ML for Robotics, Scientific \& Technical Writing, Cognitive Ergonomics \& Heuristics Evaluation, \ldots}
+
+  \resumeItem{\textbf{Cycle Ingénieur – Génie Industriel, option IA \& Data Science}
+  \hfill \textit{Meknès | Sept 2022 – Août 2025}\\
+  \textcolor{darkblue}{École Nationale Supérieure d’Arts et Métiers}}\\
+  \textbf{Cours : } Intelligence Artificielle, Machine Learning, Modélisation et simulation en IA, Traitement de signal, Bases de Données, Programmation Orientée Objet Java, Visualisation et communication des données \ldots
+
+
+  \resumeItem{\textbf{Cycle Préparatoire Arts \& Métiers}
+  \hfill \textit{Meknès | Oct 2020 – Juin 2022}\\
+  \textcolor{darkblue}{École Nationale Supérieure d’Arts et Métiers}}\\
+  \textbf{Cours : }  Calcul des probabilités, Algorithmique et programmation C++, Automatique des systèmes, Programmation avancée, Analyse 1, Algèbre linéaire, Environnement et outil informatique, Méthodes numérique \ldots
+
+\vspace{-5mm}
+  
+\end{itemize}
+
+%----------- Expérience ----------
+\cvsection{Expériences Professionnelles / Experience}
+\begin{itemize}[leftmargin=*]
+  \resumeItem{\textbf{Stage R\&D–Ingénieur IA et Logiciel | \color{darkblue}Dassault Systèmes 3DS}
+  \hfill \textit{Vélizy-Villacoublay | Fév 2025 – Août 2025}\\
+  \textbf{Flux Web / App native : détection IA des matériaux et application dans 3DEXPERIENCE}\\
+ 
+  \vspace{2mm}
+
+   - Développé un framework C++ natif optimisant la navigation dans des assemblages complexes (20+ instances) sur 3DEXPERIENCE en contournant ENOVIA.
+\\ - Généré plus de 10k rendus multi-vues haute définition avec extraction systématique des métadonnées pour alimenter la prédiction IA.
+\\ - Conçu une architecture d’attention multi-flux (PyTorch/CUDA) intégrant six modalités visuelles pour améliorer la séparation et la cohérence des propriétés de réflexion.
+\\ - Intégré ControlNet pour automatiser la stylisation des rendus et sécuriser la communication bidirectionnelle entre l’application native PLM et la plateforme 3D Whiteboard.
+  }
+
+  \resumeItem{\textbf{Stage de recherche – Intelligence Artificielle | \color{darkblue}Ai Movement}
+  \hfill \textit{Rabat | Juin 2024 – Août 2024}\\
+  \textbf{Amélioration de la détection par reconstruction 3D multi-vues et annotations croisées multi-domaines}\\
+
+  \vspace{2mm}
+
+   - Développé une approche innovante de reconstruction volumique 3D à partir d'images 2D (mammographies), générant plus de 800 volumes compressés et validant l'efficacité de NeRF pour l'imagerie médicale.
+\\ - Implémenté une fonction de perte 3D différentiable en PyTorch/CUDA pour la RPN, réduisant l'écart de performance à 0.023 en AP@0.25 par rapport aux approches traditionnelles.
+\\ - Conçu et déployé une interface web interactive en React.js pour l’annotation et la gestion des données, intégrant la visualisation 3D et le pipeline ML.
+  }
+
+  \resumeItem{\textbf{Stage: Power BI \& IA Générative | \color{darkblue}TNC.Agency}
+  \hfill \textit{Casablanca | Juil 2024 – Sept 2024}\\
+
+  \vspace{2mm}
+
+ - Développé des tableaux de bord interactifs sous Power BI avec des pipelines ETL/ELT automatisés via Azure Data Factory, réduisant de 70 \% le temps d’analyse des données (CPC, CTR, ROI).
+\\ - Implémenté des environnements d’intelligence artificielle générative (Stable Diffusion XL) et des workflows collaboratifs, augmentant de 50 \% la productivité créative et facilitant l’intégration de designers.
+}
+  
+
+  \resumeItem{\textbf{Stage R\&D - Conception \& Analyse de données | \color{darkblue}Lear Corporation }
+  \hfill \textit{Rabat | Juil 2023 – Août 2023}\\
+
+  \vspace{2mm}
+
+ - Développé la modélisation CAO et la simulation d’injection plastique avec CATIA V5 et Siemens NX pour optimiser la conception des composants de sécurité, réduisant de 15 \% les cycles de prototypage.
+\\ - Conçu un pipeline Python intégrant l’extraction de caractéristiques temporelles et l’application de modèles Random Forest et SVR pour prédire l’indice HIC, renforçant la précision des évaluations de sécurité.  
+}
+\end{itemize}
+
+%----------- Projets ----------
+\cvsection{Projets Académiques / Projects}
+\begin{itemize}[leftmargin=*]
+ \item \textbf{Extraction automatisée de données de factures par \textbf{OCR} + \textbf{LLM} | ENSAM} 
+\newline
+Extraire automatiquement date, numéro, montant et fournisseur de multiples formats de facture et proposer une UI de \textbf{validation humaine}. 
+
+\vspace{-3mm}
+(Technologies : \textbf{PaddleOCR}, pré-traitement d’images, \textbf{NER transformer} (Hugging Face), fine-tuning \textbf{Ollama}, torchvision, React)
+
+\item \textbf{ORCHESTRAITOR: Chatbot Intelligent avec Sélection Dynamique du Meilleur \textbf{LLM} en Temps Réel | Personnel} 
+\newline
+Concevoir un chatbot intelligent capable de sélectionner dynamiquement le \textbf{LLM} le plus pertinent pour répondre à une question, selon des données d’évaluation \textbf{benchmarkées}. 
+
+\vspace{-3mm}
+(Technologies : \textbf{FAISS}, base de vecteurs, benchmarks \textbf{MMLU/codeforces/math500}, \textbf{OpenAI Api}, \textbf{Claude Api}, \textbf{Deepseek Api}, gestion multi-contexte, \textbf{embeddings sémantiques}, orchestration inter-\textbf{LLMs})
+
+\item \textbf{Amélioration AMDEC via \textbf{LMM multimodaux} | ENSAM et Université de Lund}
+
+\vspace{-3mm}
+
+\item \textbf{Guide Campus en \textbf{Réalité Augmentée} avec \textbf{React}, \textbf{OpenCv} et \textbf{Vuforia} | ENSAM}
+
+\vspace{-3mm}
+
+\item \textbf{Agent IA pour évaluation de correspondance d'offres d'emploi | Projet Personnel}
+
+\vspace{-3mm}
+\end{itemize}
+
+%----------- Compétences ----------
+\cvsection{Compétences / Skills}
+\textbf{Langages de Programmation :} C++, Python, Java, JavaScript, Rust, Bash/Shell, CUDA \\\[-0.7mm]
+\textbf{Frameworks ML/DL :} PyTorch, TensorFlow, Scikit-learn, Hugging Face Transformers, Diffusers, PaddleOCR, OpenCV, ControlNet \\\[-0.7mm]
+\textbf{Modélisation et Simulation Industrielle :} Abaqus, CATIA V5, Siemens NX, Ansys, COMSOL \\\[-0.7mm]
+\textbf{Science des Données, Bases de Données \& Cloud :} Power BI, Azure Data Factory, SQL, NoSQL, Pandas, Firebase, AWS, Google Cloud Platform \\\[-0.7mm]
+\textbf{Architecture Systèmes \& Intégration :} ROS, ROS2, 3DEXPERIENCE, ENOVIA, WebSocket, Git, Kubernetes, Jenkins \\\[-0.7mm]
+\textbf{Développement Web \& Déploiement :} React, Docker, HTML, CSS, Node.js, TypeScript \\\[-0.7mm]
+\textbf{Outils NLP \& IA Générative :} spaCy, NLTK
+%----------- Certifications ----------
+\cvsection{Certificats / Certifications}
+Deep Learning Specialization — Coursera (DeepLearning.AI)\\
+Machine Learning Specialization — Coursera (DeepLearning.AI)
+
+%----------- Langues ----------
+\cvsection{Langues / Languages}
+Anglais (Bilingue) \textbullet\ Français (Courant) \textbullet\ Arabe (Langue maternelle) \textbullet\ Espagnol (Débutant)
+
+%----------- Activités ----------
+\cvsection{Activités Parascolaires / Extracurricular}
+Chef Médiatisation \& IT — ADE et 4 autres clubs (2021-2024) \textbullet\ Membre Club Robotique (2022-2024) \textbullet\ Chef CraftX \& Aerospace — Space Club ENSAM (2022-2023) \textbullet\ 2ème prix Compétition de programmation
+nationale AMPCII 
+  
+
+%----------- Intérêts ----------
+\cvsection{Intérêts / Interests}
+Échecs • Infographie \& Design 3D • Badminton • Formula 1 • Jiu-jitsu
+
+\end{document}

@@ -1,0 +1,176 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.90,top=0.7cm,bottom=0.7cm]{geometry}
+
+% CORRECTION ENCODAGE - Packages essentiels pour les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% Package pour copier/coller correct
+\usepackage{cmap}
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Reduce space between sections
+\renewcommand{\sectionskip}{\medskip}
+
+% Configuration des puces avec des anneaux colorés
+\newcommand{\ringbullet}{%
+  \tikz[baseline=-0.1ex]{
+    \draw[color1, line width=0.8pt] (0,0) circle (0.08cm);
+    \fill[color1] (0,0) circle (0.03cm);
+  }
+}
+
+\setlist[itemize]{
+    label=\ringbullet,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt
+}
+
+% Alternative: anneaux simples sans point central
+% \newcommand{\ringbullet}{\tikz[baseline=-0.1ex]{\draw[color1, line width=0.8pt] (0,0) circle (0.08cm);}}
+
+% Alternative: puces FontAwesome pour un look plus moderne (si préféré)
+% \setlist[itemize]{
+%     label=\textcolor{color1}{\faAngleRight},
+%     leftmargin=1.2em,
+%     itemsep=0pt,
+%     topsep=0pt,
+%     parsep=0pt
+% }
+
+\renewcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=TagColor!40,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+% Custom command to create left-aligned header
+\newcommand{\makeleftheader}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=0pt] at ([xshift=-0.9cm,yshift=-0.1cm]current page.north east) {
+    \includegraphics[width=2.8cm]{photo.png}
+  };
+    
+    % Title and info on the left
+    \node[anchor=north west,inner sep=0pt] at ([xshift=1cm,yshift=-1cm]current page.north west) {
+      \begin{minipage}{0.95\textwidth}
+        \raggedright
+        {\Huge\color{color1}\textbf{MAHFOUD YOUSSEF}} \\[0.5em]
+        {\Large\color{color2}Ingénieur IA \& Back-end} \\[1em]
+        
+          \faPhone & +33 7 45 50 23 49 
+          \faEnvelope & youssef.mahfoud@imt-atlantique.net
+          \faLinkedin & Youssef Mahfoud
+          \faMapMarker & Paris, France 
+    
+      \end{minipage}
+    };
+  \end{tikzpicture}
+  \vspace{2cm} % Adjust this space as needed
+}
+
+% Personal Information (keeping for compatibility but won't be used)
+\name{MAHFOUD}{Youssef}
+\phone[mobile]{+33 7 45 50 19 06}
+\email{mohamed.bachar.fr@gmail.com}
+\social[linkedin]{Mohamed BACHAR}
+\address{Paris, France}{}{}
+
+\begin{document}
+% Use custom header instead of \makecvtitle
+\makeleftheader
+
+\section{PROFIL}
+\small{ ??*0*?? }
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+
+\cventry{Février 2025 — Présent}{Stage PFE Ingénieur IA \& Logiciel }{Dassault Systèmes 3DS - CATIA R\&D }{Vélizy-Villacoublay, France}{}{
+\begin{itemize}
+
+ - Développé un framework C++ pour accélérer l'ouverture de maquettes complexes dans 3DEXPERIENCE, contournant ENOVIA et optimisant la navigation PLM.
+\\ - Généré plus de 10k rendus HD multi-vues via OpenGL, incluant l'export des métadonnées pour l'entraînement IA.
+\\ - Conçu et entraîné un modèle IA multi-modalités (PyTorch/CUDA) intégrant six flux visuels, améliorant la précision de la prédiction des matériaux.
+\\ - Implémenté un pipeline bidirectionnel sécurisé (WebSockets, REST API) pour la plateforme 3D Whiteboard, automatisant l'application des matériaux sur les maquettes.
+
+\end{itemize}}
+
+\cventry{Juin 2024 – Août 2024}{Stage Ingénieur IA}{Centre International d'Intelligence Artificielle du Maroc - Ai Movement}{Rabat, Maroc}{}{
+\begin{itemize}
+
+ - Développé un modèle de reconstruction 3D via NeRF--, générant plus de 800 volumes compressés et estimant automatiquement les paramètres de caméras à partir d'images mammographiques.
+\\ - Implémenté une fonction de perte 3D différentiable en PyTorch/CUDA pour entraîner des réseaux de propositions régionales utilisant uniquement des annotations 2D, atteignant une performance AP@0.25 avec une différence de 0.023 par rapport aux approches complètes.
+\\ - Conçu une interface web interactive et factorisé un pipeline modulaire en bibliothèque Python/C++ pour l'annotation, la visualisation 3D et la gestion des données.
+
+\end{itemize}}
+
+\cventry{Juillet 2024 – Septembre 2024}{Stage Power BI \& IA Génerative}{TNC.Agency}{Casablanca, Maroc}{}{
+\begin{itemize}
+
+ - Développé trois tableaux de bord Power BI interactifs et automatisé des pipelines ETL/ELT via Azure Data Factory, réduisant de 70 \% le temps d'analyse manuelle.
+\\ - Implémenté des environnements d'intelligence artificielle (Stable Diffusion XL, Pony, FLUX) et co-conçu des workflows visuels intégrant Adobe Photoshop et Illustrator, augmentant de 50 \% la productivité créative.
+
+\end{itemize}}
+
+\cventry{Juillet 2023 – Août 2023}{Stage Conception \& Analyse de données}{LEAR Corporation}{Rabat, Maroc}{}{
+\begin{itemize}
+
+ - Développé des modèles CAO sur CATIA V5 et Siemens NX pour concevoir et optimiser des composants plastiques conformes aux contraintes de moulage et à la norme ISO 6487, réduisant de 15 \% les cycles de prototypage.
+\\ - Développé une pipeline en Python pour extraire et analyser les signaux de collision, entraînant des modèles Random Forest et SVR afin de prédire l'indice Head Injury Criterion (HIC) et améliorer l'évaluation des risques.
+
+\end{itemize}}
+
+\section{FORMATION}
+
+\cventry{Sep 2024 — Présent}{Master Informatique: Systèmes interactifs, intelligents et autonomes}{IMT-Atlantique, Bretagne INP-ENIB, UBO}{Brest, France}{}{}
+\vspace{}
+\textbf{Cours notables :} Deep Learning, Transformers, Robot Operating System (ROS), SLAM, Human-in-the-Loop ML for Robotics, Vision-Guided Manipulation \& Grasping, Project Management \& Teamwork
+\vspace{2mm}
+\newline
+\cventry{Sep 2020 — Présent}{Cycle d'ingénieur en IA \& Data Science et le génie industriel}{École Nationale Supérieure d’Arts et Métiers}{Meknès, Maroc}{}{}
+\textbf{Cours notables :} Machine Learning, Intelligence Artificielle, Modélisation et simulation en IA, Data Mining, Bases de Données, Programmation Orientée Objet Java, Industrie 4.0 et Usine Future, Visualisation et communication des données  Calcul des probabilités, Algorithmique et programmation C++, Programmation avancée, Automatique des systèmes, Analyse 1, Algèbre linéaire, Méthodes numérique
+\vspace{2mm}
+
+\section{PROJETS ACADÉMIQUES}
+
+
+??*8*??
+
+
+
+\section{COMPÉTENCES}
+
+??*9*??
+
+
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+\section{LANGUES}
+\cvitem{}{Anglais — bilingue}
+\cvitem{}{Français — bilingue}
+\cvitem{}{Arabe — Langue maternelle}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\section{CERTIFICATIONS}
+\cvitem{}{Deep Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Machine Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Analyze Data with Python — Codecademy}
+\end{minipage}
+
+\section{ACTIVITÉS PARASCOLAIRES}
+\cvitem{}{Président du club informatique Gadz'IT, ENSAM Meknès }
+\cvitem{}{Chef de la cellule Média \& IT du Club Robotique AM}
+\cvitem{}{Chef de la cellule CraftX \& Aerospace du Club Space AM}
+
+\end{document}

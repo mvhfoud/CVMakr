@@ -1,0 +1,21 @@
+LEAR Corporation – R&D Engineer, Design & Simulation
+
+
+Optimisation des composants de sécurité passive (sièges, appuis‑tête) : modélisation CAO, simulation d’injection plastique et analyse IA des tests de collision (whiplash) pour conformité normes internationales.
+
+Réalisations clés (orienté Backend Dev & AI Software Engineer)
+
+Modélisation & simulation CAO : CATIA V5, Siemens NX, Moldflow et outils internes pour design “ribs”, épaisseurs, angles de démoulage ; optimisation géométrique pour cycle time réduit (-15 % itérations physiques)
+
+Pipeline d’analyse collision (whiplash) : Python end‑to‑end (feature engineering signaux accéléromètres – pics, plateaux, dérivées), prédiction HIC via Random Forest & SVR, export de modèles ONNX pour inference cross‑platform
+
+Visualisation & reporting : tableaux de bord interactifs avec Matplotlib & Seaborn, intégration dans Jupyter Notebook pour prise de décision
+
+GD&T & documentation : validation tolérances ISO 6487, génération automatisée de plans et fiches techniques (Excel avancé, VBA)
+
+Conformité & optimisation matériaux : proposition de modifications (densité, module d’Young, élasticité), validation via simulations before/after
+
+Environnement & CI/CD : gestion de code et automatisations avec Git, scripts JavaScript pour tâches internes, déploiement de pipeline Python
+
+Technologies & outils
+Python, Random Forest, SVR, ONNX, NumPy, pandas, scikit‑learn, Matplotlib, Seaborn, CATIA V5, Siemens NX, Moldflow, VBA, JavaScript, Git, Excel, Jupyter Notebook

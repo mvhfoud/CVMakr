@@ -1,0 +1,23 @@
+GOAL
+Actively pursuing a permanent CDI (full‑time, open‑ended contract) starting September 2025 in software engineering or AI‑focused R&D.
+
+PROFESSIONAL SUMMARY
+I’m Youssef Mahfoud, a software and AI engineer specializing in backend architectures, data pipelines and scalable intelligence systems. After completing a five‑year engineering curriculum in Morocco—where I first honed my skills in systems design, process optimization and CAD/CAE—I dove headlong into software: building Pythonic ETL pipelines on Azure, containerizing microservices with Docker and Kubernetes, and automating CI/CD workflows.
+
+To deepen my expertise in intelligent systems, I earned my M2 in Systèmes Intelligents Interactifs et Autonomes in Brest, France, where I mastered symbolic reasoning, multi‑agent frameworks and LLM orchestration. Today, I architect and deploy robust backend solutions—from designing RESTful APIs in FastAPI to optimizing C++ modules for real‑time 3D reconstruction—and integrate them with AI models to create human‑centred applications that run reliably at scale.
+Professionally, I have proven my mettle in fast‑moving R&D environments:  
+* **Dassault Systèmes (2025‑present):** built unit tests for CATIA, To be able to create synthetic datasets. instilling CI/CD discipline across legacy C++ code bases.  
+* **thenext.click (2024):** deployed a generative‑AI marketing workflow that married Power BI dashboards with LLM‑driven creative assets, cutting content‑production time by 40 %.  
+* **Ai movement / UM6P (2024):** designed a NeRF‑based 3D tumour‑detection pipeline that fused medical imaging, geometry and deep learning, demonstrating my capacity to translate state‑of‑the‑art research into clinical prototypes.
+
+My toolbox spans **Python, C++, C (bit of C#, Rust and React)**; FAST API, Kubernetes, Databases, **PyTorch, TensorFlow, OpenCV**; CI/CD with GitLab and Docker; cloud deployments on **Azure, AWS and GCP**; and mechanical/CAE expertise with **CATIA V5, SolidWorks and ABAQUS**.  I am equally at ease writing low‑level embedded firmware for EMG‑sensor controllers, scripting vision tests in ROS/SLAM, or fine‑tuning LLM‑based RAG agents to answer domain‑specific questions.
+
+Beyond the technical sphere, I thrive on complexity and pressure: I relish tight deadlines, intricate legacy architectures and green‑field research questions in equal measure.  Colleagues know me as analytical yet empathetic—a multilingual communicator (Arabic native, French and English C1, Spanish A2) who listens first, speaks with clarity and can mediate between mechanical engineers, data scientists and business stakeholders.  Introverted by nature, I engage deeply in serious discourse and am happiest when turning hard problems into elegant, production‑ready solutions.  Off‑hours, I sharpen strategy on the chessboard, channel resilience on the badminton court, and dive into cognitive‑science literature—habits that feed the curiosity and mental rigour I bring to work every day.
+
+In brief, I bring:  
+• Industrial rigour + AI innovation → build systems that work in the real world  
+• Mechanical intuition + software craftsmanship → span hardware, data and code  
+• Multicultural fluency + team empathy → accelerate cross‑disciplinary collaboration  
+• Challenge‑seeking mindset + calm under fire → deliver under pressure
+
+I am now ready to invest those strengths full‑time in a CDI role where ambitious software or AI products are conceived, tested and shipped—ideally within organisations that value intellectual curiosity, ethical engineering and measurable impact.

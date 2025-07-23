@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.90,top=0.7cm,bottom=0.7cm]{geometry}
+
+% CORRECTION ENCODAGE - Packages essentiels pour les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% Package pour copier/coller correct
+\usepackage{cmap}
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Reduce space between sections
+\renewcommand{\sectionskip}{\medskip}
+
+% Configuration des puces avec des anneaux colorés
+\newcommand{\ringbullet}{%
+  \tikz[baseline=-0.1ex]{
+    \draw[color1, line width=0.8pt] (0,0) circle (0.08cm);
+    \fill[color1] (0,0) circle (0.03cm);
+  }
+}
+
+\setlist[itemize]{
+    label=\ringbullet,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt
+}
+
+% Alternative: anneaux simples sans point central
+% \newcommand{\ringbullet}{\tikz[baseline=-0.1ex]{\draw[color1, line width=0.8pt] (0,0) circle (0.08cm);}}
+
+% Alternative: puces FontAwesome pour un look plus moderne (si préféré)
+% \setlist[itemize]{
+%     label=\textcolor{color1}{\faAngleRight},
+%     leftmargin=1.2em,
+%     itemsep=0pt,
+%     topsep=0pt,
+%     parsep=0pt
+% }
+
+\renewcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=TagColor!40,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+% Custom command to create left-aligned header
+\newcommand{\makeleftheader}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=5pt] at ([xshift=-1cm,yshift=-0.5cm]current page.north east) {
+    \includegraphics[width=2.8cm]{photo.png}
+  };
+    
+    % Title and info on the left
+    \node[anchor=north west,inner sep=0pt] at ([xshift=1cm,yshift=-1cm]current page.north west) {
+      \begin{minipage}{0.95\textwidth}
+        \raggedright
+        {\Huge\color{color1}\textbf{MAHFOUD YOUSSEF}} \\[0.5em]
+        {\Large\color{color2}Future Ingénieur IA \& Back-end} \\[1em]
+        
+          \faPhone & +33 7 45 50 23 49 
+          \faEnvelope & youssef.mahfoud@imt-atlantique.net
+          \faLinkedin & Youssef Mahfoud
+          \faMapMarker & Paris, France 
+    
+      \end{minipage}
+    };
+  \end{tikzpicture}
+  \vspace{2cm} % Adjust this space as needed
+}
+
+% Personal Information (keeping for compatibility but won't be used)
+\name{MAHFOUD}{Youssef}
+\phone[mobile]{+33 7 45 50 19 06}
+\email{mohamed.bachar.fr@gmail.com}
+\social[linkedin]{Mohamed BACHAR}
+\address{Paris, France}{}{}
+
+\begin{document}
+% Use custom header instead of \makecvtitle
+\makeleftheader
+
+\section{PROFIL}
+\small{ Ingénieur en automatisation industrielle et IA, j'ai développé et intégré des systèmes de contrôle commande à l'aide de langages orientés objet tels que C++, C\# et Python, tout en assurant la rigueur des tests unitaires et le reporting technique. Apprenant rapide et hautement intuitif, je recherche un poste à temps plein (CDI ou CDD) dès septembre/octobre pour contribuer à la modernisation et à l'optimisation de systèmes industriels. }
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+
+\cventry{Février 2025 — Présent}{Stage PFE Ingénieur IA \& Logiciel }{Dassault Systèmes 3DS - CATIA R\&D }{Vélizy-Villacoublay, France}{}{}
+\begin{itemize}
+
+
+\item{Développé un framework natif en C++ pour le chargement et le parcours rapide de plus de 20 assemblages dans 3DEXPERIENCE, assurant une spécification technique robuste.} 
+\item{Automatisé la génération de plus de 10 000 rendus multi-vues HD avec export JSON tout en intégrant des tests unitaires sous pytest pour garantir la fiabilité des logiciels.} 
+\item{Intégré un pipeline sécurisé WebSocket/REST containerisé via Docker et orchestré par Kubernetes, et entraîné 5 architectures d’IA en PyTorch/CUDA pour une inference cross-platform.}
+
+\end{itemize}
+
+\cventry{Juin 2024 – Août 2024}{Stage Ingénieur IA}{Centre International d'Intelligence Artificielle du Maroc - Ai Movement}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Développé et calibré un algorithme NeRF en PyTorch/CUDA générant plus de 800 volumes 3D compressés (.npz), intégrant la calibration automatique des paramètres caméra.} 
+\item{Implémenté une fonction de perte 3D sur RPN différentiable intégrant des backbones multiscale (ResNet, EfficientNet, DLA) et optimisé les kernels CUDA, obtenant une amélioration ΔAP@0.25 de 0.023.} 
+\item{Conçu une interface web d’annotation complète en React/TypeScript et Node.js/Express, intégrée à une API REST, assurant tests unitaires, reporting automatisé et déploiement local/cloud.}
+
+\end{itemize}
+
+\cventry{Juillet 2024 – Septembre 2024}{Stage Power BI \& IA Génerative}{TNC.Agency}{Casablanca, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Conçu et automatisé 3 dashboards Power BI et pipelines ETL/ELT sous Azure Data Factory, réduisant de 70 \% les analyses manuelles grâce à des formules DAX avancées et des tests unitaires sous pytest.} 
+\item{Développé un workflow d’IA générative orchestré sur Kubernetes et déployé en conteneurs Docker, intégrant l’export de modèles en ONNX et la documentation détaillée pour optimiser la productivité créative (+50 \%) et la satisfaction client.}
+
+\end{itemize}
+
+\cventry{Juillet 2023 – Août 2023}{Stage Conception \& Analyse de données}{LEAR Corporation}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{- Développé et intégré une solution automatisée de simulation et d’analyse prédictive de collisions (whiplash) combinant modélisation CAO (CATIA V5, Siemens NX) et pipeline Python (Random Forest, SVR), réduisant de 15 \% les itérations physiques pour répondre aux normes internationales.}
+
+\end{itemize}
+
+\section{FORMATION}
+
+\cventry{Sep 2024 — Présent}{Master Informatique: Systèmes interactifs, intelligents et autonomes}{IMT-Atlantique, Bretagne INP-ENIB, UBO}{Brest, France}{}{}
+
+\cventry{Sep 2020 — Présent}{Cycle d'ingénieur en IA \& Data Science et le génie industriel}{École Nationale Supérieure d’Arts et Métiers}{Meknès, Maroc}{}{}
+
+\section{PROJETS ACADÉMIQUES}
+
+
+\cvitem{Amélioration \textbf{AMDEC} via \textbf{LMM multimodaux} | ENSAM et Université de Lund}{\textbf{LMM multimodaux}. \textbf{Python}. \textbf{FastAPI}. ASR temps réel}
+\cvitem{Plateforme d’inférence \textbf{ML scalable} en production | Personnel}{\textbf{Django}. \textbf{Docker}. \textbf{Kubernetes}. \textbf{gRPC}}
+\cvitem{PulseMonitor – Service \textbf{Python asynchrone} de monitoring \& alerting API}{\textbf{FastAPI}. \textbf{asyncio}. \textbf{PostgreSQL}. \textbf{Redis}}
+\cvitem{Pipeline de traitement de données \textbf{streaming} pour IoT | Personnel}{\textbf{Apache Kafka}. \textbf{Spark Structured Streaming}. \textbf{Python}. \textbf{Docker}}
+
+
+
+\section{COMPÉTENCES}
+
+\cvtag{C++} \cvtag{C\\#} \cvtag{Python} \cvtag{Bash} \cvtag{CUDA} \cvtag{Git} \cvtag{React} \cvtag{PostgreSQL} \cvtag{FastAPI} \cvtag{Docker} \cvtag{Kubernetes} \cvtag{Redis} \cvtag{PyTorch} \cvtag{Power BI} \cvtag{Communication} \cvtag{Rigueur} \cvtag{Agilité} \cvtag{Créativité} \cvtag{Unit Testing} \cvtag{CI/CD} \cvtag{Programmation orientée objet} \cvtag{Industrial Automation} \cvtag{PLC Programming} \cvtag{SCADA} \cvtag{Reporting}
+
+
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+\section{LANGUES}
+\cvitem{}{Anglais — bilingue}
+\cvitem{}{Français — bilingue}
+\cvitem{}{Arabe — Langue maternelle}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\section{CERTIFICATIONS}
+\cvitem{}{Deep Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Machine Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Analyze Data with Python — Codecademy}
+\end{minipage}
+
+
+
+\end{document}

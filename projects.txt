@@ -1,0 +1,59 @@
+=== PROJET 1 DÉBUT ===
+TITRE: Amélioration AMDEC via LMM multimodaux | ENSAM et Université de Lund
+TECHNOLOGIES: LMM multimodaux, base de vecteurs, workflows RAG, ASR temps réel, sous-titrage vidéo, Python, FastAPI
+=== PROJET 1 FIN ===
+
+=== PROJET 2 DÉBUT ===
+TITRE: Guide Campus en Réalité Augmentée avec React, OpenCv et Vuforia | ENSAM
+TECHNOLOGIES: Visual SLAM, détection YOLO, appariement ORB, path-finding A*, OpenCV, JavaScript, Firebase,Flask, Docker, Cloud Run
+=== PROJET 2 FIN ===
+
+=== PROJET 3 DÉBUT ===
+TITRE: Extraction automatisée de données de factures par OCR + LLM | ENSAM
+TECHNOLOGIES: PaddleOCR, pré-traitement d’images, NER transformer (Hugging Face), fine-tuning Ollama, torchvision, React
+=== PROJET 3 FIN ===
+
+=== PROJET 4 DÉBUT ===
+TITRE: Simulation 3D d’essaim de drones en Godot | UBO
+TECHNOLOGIES: Godot Engine, GDScript, A* path-finding, champs de potentiels artificiels, flocking Reynolds, Bullet Physics, ray-casting
+=== PROJET 4 FIN ===
+
+=== PROJET 5 DÉBUT ===
+TITRE: Pipeline Vision3D-Coherent pour reconstruction mécanique | Personnel
+TECHNOLOGIES: LLaVA fine-tune vision-langage, DALL-E génération multi-vues, minimisation perte cosinus, NeRF, PyTorch
+=== PROJET 5 FIN ===
+
+=== PROJET 6 DÉBUT ===
+TITRE: Jeu web interactif 3D pour musée personnalisé avec Babylon.js et Flask | CERV
+TECHNOLOGIES: Babylon.js, système de préférences utilisateur, Python (Flask), analyse comportementale, recommandation dynamique
+=== PROJET 6 FIN ===
+
+=== PROJET 7 DÉBUT ===
+TITRE: Agent IA pour évaluation de correspondance d'offres d'emploi | Personnel
+TECHNOLOGIES: Selenium, OpenAI API, IA agentique (planning + exécution), parsing HTML, extraction de compétences, calcul de similarité
+=== PROJET 7 FIN ===
+
+=== PROJET 8 DÉBUT ===
+TITRE: ORCHESTRAITOR: Chatbot Intelligent avec Sélection Dynamique du Meilleur LLM en Temps Réel
+TECHNOLOGIES: FAISS, base de vecteurs, MMLU/codeforces/math500 benchmarks, OpenAI API, Claude API, Deepseek API, orchestration inter-LLMs
+=== PROJET 8 FIN ===
+
+=== PROJET 9 DÉBUT ===
+TITRE: Plateforme d’inférence ML scalable en production | Personnel
+TECHNOLOGIES: Django, Docker, Kubernetes (Helm), gRPC, Redis, Nginx, Prometheus, Grafana, GitLab CI/CD
+=== PROJET 9 FIN ===
+
+=== PROJET 10 DÉBUT ===
+TITRE: Pipeline de traitement de données streaming pour IoT | Personnel
+TECHNOLOGIES: Apache Kafka, Spark Structured Streaming, Python, gRPC, PostgreSQL, Docker, Terraform, AWS EKS
+=== PROJET 10 FIN ===
+
+=== PROJET 11 DÉBUT ===
+TITRE: MLOps & Feature Store pour scoring prédictif | Personnel
+TECHNOLOGIES: Feast, Apache Airflow, Python, Redis, Kubernetes, Terraform, BigQuery, MLflow
+=== PROJET 11 FIN ===
+
+=== PROJET 12 DÉBUT ===
+TITRE: PulseMonitor – Service Python asynchrone de monitoring & alerting API
+TECHNOLOGIES: FastAPI, asyncio & aiohttp, SQLModel & Alembic (PostgreSQL), Redis, Celery, RabbitMQ, WebSockets, Pydantic, Uvicorn, Docker, pytest
+=== PROJET 12 FIN ===

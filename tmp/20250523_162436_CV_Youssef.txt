@@ -1,0 +1,322 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage{setspace}
+
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={},
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Youssef MAHFOUD}
+\newcommand{\course}{Double Diplôme : Génie Industriel, IA \& Data Science / Master Informatique: SIIA}
+
+\newcommand{\roll}{}
+\newcommand{\phone}{+33 7 45 50 23 49}
+\newcommand{\emaila}{youssef.mahfoud@imt-atlantique.net}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+  % Colonne 1 : Image
+  \begin{minipage}{0.15\linewidth}
+    \includegraphics[width=\linewidth]{photo.png}
+    
+  \end{minipage}
+  \hspace{1mm}
+  &
+  % Colonne 2 : Informations personnelles (centrées verticalement)
+  \begin{minipage}{\linewidth}
+    \raggedright
+    \textbf{\Large \name} \\
+    \textit{\course}\\[3mm]
+    
+  \end{minipage}
+\end{tabularx}
+\vspace{1.5mm}
+
+Ingénieur en IA, logiciel et industriel, j'ai développé et optimisé des solutions en C++ en intégrant des pratiques CI/CD et des interfaces modernes (Qt, OpenGL), tout en assurant l'industrialisation des algorithmes de traitement de données. Fort d'expériences réussies en environnements R\&D et agile, je recherche activement un poste à temps plein (CDI ou CDD) à partir de septembre/octobre pour contribuer à l'innovation logicielle dans des projets techniques exigeants.
+
+
+\vspace{3mm}
+{\footnotesize \faPhone}\ \phone \hspace{2mm}
+    \href{mailto:\emaila}{\footnotesize \faEnvelope\ \emaila}
+    \hspace{2mm}
+    \href{https://www.linkedin.com/in/youssef-mahfoud-b213381b3/}{\footnotesize \faLinkedin\ LinkedIn}
+    \hspace{2mm}
+    {\footnotesize \faMapMarker Massy, île de france, France}
+    \hspace{2mm}
+
+    
+\vspace{-2mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{\textcolor{blue}{Formation Académique}}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Master Informatique (Systèmes interactifs, intelligents et autonomes)}{En cours}
+      {Programme Conjoint: IMT Atlantique, Bretagne INP - ENIB, UBO, ENSTA, Brest, France}{Sept. 2024 – Présent}
+      {\footnotesize
+        \setstretch{1.5}
+        \textbf{Cours notables :} Deep Learning, Transformers, Robot Operating System (ROS), 3D Modeling \& Rendering, Project Management \& Teamwork, Human Factors, Scientific Methodology \& Experimental Validation, Bibliographic Research \& Technology Watch
+
+             \vspace{-1.5mm}
+ \par
+      }
+
+    \resumeSubheading
+      {Cycle d’ingénieur en Génie Industriel : IA \& Data Science}{En cours}
+      {ENSAM Meknès, Maroc}{Sept. 2022 – Présent}
+      {\footnotesize
+        \setstretch{1.5}
+        \textbf{Cours notables :} Machine Learning, Intelligence Artificielle, Programmation Orientée Objet Java, Bases de Données, Traitement de signal, Modélisation statistique, Communication et développement personne
+
+             \vspace{-1.5mm}
+ \par
+      }
+
+    \resumeSubheading
+      {Cycle préparatoire intégré}{Terminé}
+      {ENSAM Meknès, Maroc}{Oct. 2020 – Juin 2022}
+      {\footnotesize
+        \setstretch{1.5}
+        \textbf{Cours notables :} Algorithmique et programmation C++, Programmation avancée, Méthodes numérique, Calcul des probabilités, Automatisme, Environnement et outil informatique, DAO, Analyse 1
+
+              \vspace{-1.5mm}
+\par
+      }
+
+    \resumeSubheading
+      {Baccalauréat Sciences Mathématiques B}{Obtenu}
+      {Lycée Technique, Errachidia, Maroc}{Juin 2020}
+            \vspace{-1.5mm}
+      \vspace{-1.5mm}
+
+
+  \resumeSubHeadingListEnd
+
+      \vspace{-1.5mm}
+      \vspace{-1.5mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{\textcolor{blue}{Expériences Professionnelles}}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Stage R\&D – Ingénieur IA et Logiciel (Dassault Systèmes)}{Fevrier 2025 – Août 2025}
+      {Vélizy-Villacoublay, France }{}
+      \resumeItemListStart
+      \vspace{-0.5mm}
+      \textbf{Automatisation par l’IA de la reconnaissance et de l’application de matériaux dans les environnements PLM}
+      \item {Développé un framework natif en C++ contournant ENOVIA pour naviguer efficacement dans les environnements PLM, ouvrant des assemblages complexes (20+ caractéristiques) dans l’industrie automobile.
+} \item {Automatisé la génération de plus de 8 000 rendus haute définition multi-vues via OpenGL, exportant systématiquement métadonnées (pose, focale, éclairage) pour des tâches de vision par ordinateur.
+} \item {Implémenté une architecture à attention multi-flux fusionnant six modalités d’image pour la prédiction par matériau, améliorant la cohérence et le désentrelacement des réflexions.
+} \item {Conçu un pipeline bidirectionnel sécurisé (WebSockets + REST) connectant une application web (SDXL + ControlNet) avec des modules C++ pour l’application automatisée des matériaux DSPBR sur des modèles 3D PLM.}
+
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Stage de recherche – Intelligence Artificielle (Centre internationale d'intelligence artificielle)}{Juin 2024 – Août 2024}
+      {Rabat, Maroc }{}
+      \resumeItemListStart
+      \vspace{-1.5mm}
+      \textbf{Sujet: Détection 3D et reconstruction volumique d’images médicales 2D par champs de radiance neuronaux et RPN convolutionnels}
+      \item {Révisé plus de 30 articles scientifiques et implémenté une reconstruction volumétrique innovante (Neural Radiance Fields) pour générer plus de 800 matrices de nuages de points haute fidélité.
+} \item {Conçu et intégré une fonction de perte 3D différentiable en C++/CUDA, optimisant la détection en 3D à partir d’annotations 2D et accélérant le processus de rétropropagation.
+} \item {Optimisé et packagé la solution sous forme de bibliothèques Python/C++ avec tests unitaires et benchmarks, garantissant une intégration robuste dans des workflows de Machine Learning.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Stage: IA Génerative \& Infographie (TNC - thenext.click)}{Juillet 2024 – Septembre 2024}
+      {Casablanca, Maroc }{}
+      \resumeItemListStart
+      \vspace{-1.5mm}
+      
+      \item {Développé trois tableaux de bord interactifs en Power BI via des pipelines ETL/ELT sur Azure, réduisant de 70 \% le temps d'analyse manuel des données.
+} \item {Intégré des workflows d'IA générative en configurant Stable Diffusion XL et autres outils, générant plus de 10 assets et augmentant de 50 \% la productivité créative.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Stage: R\&D - Ingénieurie et Conception (LEAR Corporation)}{Juillet 2023 – Août 2023}
+      {Rabat, Maroc }{}
+      \resumeItemListStart
+      \vspace{-1.5mm}
+      \item {développé des modèles CAO et simulations d'injection plastique sous CATIA V5/NX, réduisant de 15 \% les itérations de prototypes et validant les tolérances géométriques et dimensionnelles (GD\&T) ;
+} \item {implémenté une chaîne de traitement des données en Python (pandas, NumPy, scikit-learn) pour l'analyse des tests de coup de fouet et la prédiction 3D du Critère de Blessure Crânienne (HIC) via Random Forest et SVR, produisant des tableaux de bord diagnostics en Matplotlib}
+
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------PROJECTS-----------------
+
+\section{\textbf{\textcolor{blue}{Projets Académiques}}}
+
+\begin{itemize}
+\item \textbf{Simulation 3D d’essaim de drones (UBO)} 
+Modéliser des drones autonomes s’auto-organisant autour d’une cible tout en évitant les obstacles grâce au ray-casting et un gscript qui définit les states. Technologies: Godot Engine, GDScript, recherche A*, champs de potentiels artificiels, flocking Reynolds, Bullet Physics, ray-casting. Impact/Résultats: Simulation temps réel (> 60 fps) montrant –90 \% de collisions et définissant les paramètres des prototypes UAV physiques avec \textbf{simulation temps réel} et \textbf{éviction de collisions}.
+
+\item \textbf{Pipeline Vision3D-Coherent pour reconstruction mécanique (Personnel)} 
+À partir d’une photo, générer des vues multi-angles cohérentes en assurant la correspondance des descriptions technique (génerée par LMMs) ea fin de construire un modèle 3D NeRF. Technologies: LLaVA fine-tune vision-langage, génération multi-vues DALL-E, minimisation perte cosinus, reconstruction NeRF, PyTorch. Impact/Résultats: Maillages étanches prêts CAD , Pas du tout parfaite pour l'utilisation en industrie avec \textbf{reconstruction 3D} et \textbf{modélisation multi-angles}.
+
+\item \textbf{Amélioration AMDEC via LMM multimodaux (ENSAM et Université de Lund)} 
+Intégrer des LMM audio-vidéo-texte dans le traitement des réclamations clients pour générer automatiquement des analyses AMDEC, des rapports techniques et des actions correctives conception/production. Technologies: LMM multimodaux, base de vecteurs, workflows RAG, ASR temps réel, sous-titrage vidéo, Python, FastAPI. Impact/Résultats: La résolution interactive a réduit de 35 \% le délai de traitement des réclamations, enregistré 100 \% des incidents dans la base modes-défaillance et fourni des tableaux de bord FMEA temps réel aux équipes conception et maintenance avec \textbf{réduction du délai} et \textbf{tableaux de bord temps réel}.
+
+
+\end{itemize}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{\textbf{\textcolor{blue}{Compétences}}}
+      C++, Python, CUDA, Java, SQL, Qt, OpenGL, OpenCL, GitLab, PCL, CGAL, Communication, Travail d'équipe, Adaptabilité
+
+
+%-----------CERTIFICATIONS-----------------
+\section{\textbf{\textcolor{blue}{Certificats}}}
+\resumeSubHeadingListStart
+  \resumeSubItem{Deep Learning Specialization}{ – Coursera (DeepLearning.AI)}
+  \resumeSubItem{Machine Learning Specialization}{ – Coursera (DeepLearning.AI)}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-----------LANGUAGES-----------------
+\section{\textbf{\textcolor{blue}{Langues}}}
+\resumeSubHeadingListStart
+  \resumeSubItem{Anglais}{ – Bilingue}{\textbf{|  Français}}{ – Courant}{ \textbf{   |  Arabe}}{ – Langue maternelle}{\textbf{ |
+   Espagnole}}{ – Débutant}  
+
+  
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+%-----------EXTRACURRICULAR ACTIVITIES-----------------
+\section{\textbf{\textcolor{blue}{Activités Parascolaires}}}
+\resumeSubHeadingListStart
+  \resumePOR{Chef de la céllule Médiatisation et IT à l'ADE et 4 autres Clubs}{}{2021 – 2024}
+  \resumePOR{Membre du club Informatique et Robotique}{}{2022 – 2024}
+  \resumePOR{Chef de la céllule CraftX et Aerospace chez Space Club ENSAM}{}{2022 – 2023}
+  
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+\end{document}

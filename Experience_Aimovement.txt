@@ -1,0 +1,11 @@
+AI Research Assistant | 3D Object Detection and Volumetric Reconstruction from 2D Medical Imagery Using Neural Radiance Fields and CNN-Based Proposal Networks
+
+
+Entraînement & évaluation : entraîné sur mammographies et données synthétiques (ScanNet) ; obtenu ΔAP@0.25 = 0.023 vs. supervision 3D complète ; visualisation et reporting automatisés via TensorBoard & Plotly
+
+Packaging & tests : factorisé le pipeline en bibliothèque Python/C++ réutilisable, couverte par tests unitaires, benchmarks de performance et documentation complète
+
+Interface web d’annotation : développé front‑end React/TypeScript/Tailwind/Three.js et back‑end Node.js/Express/MongoDB/Socket.IO, exposant l’API REST pour exécution locale ou cloud
+
+Tech Stack
+Python, C++, CUDA, PyTorch, TensorBoard, Plotly, React, TypeScript, Tailwind CSS, Zustand, Three.js, Node.js, Express, MongoDB, Socket.IO, REST API, Git, Docker, CMake, NumPy, Pandas.

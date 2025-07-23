@@ -1,0 +1,29 @@
+### Prompt ###
+
+I am applying for a specific position and would like to craft a compelling CV summary.
+
+### Instructions ###
+
+1. **Job Description:**  
+   “Insert the full job description here.”  
+
+2. **Professional Background:**  
+   “Insert your professional background here, including roles, experiences, key achievements, and skills.”  
+
+### Task ###
+
+Using the information provided above, generate a concise and impactful professional summary for my CV.
+
+### Guidelines ###
+
+- **Length:** Limit the summary to 2–3 sentences.  
+- **Tone:** Maintain a professional, confident tone.  
+- **Content:**  
+  - Highlight the most relevant skills and experiences that align with the job description.  
+  - Incorporate quantifiable achievements where possible (e.g., “increased sales by 20%”).  
+  - Use active language and strong action verbs (e.g., led, developed, implemented).  
+  - Avoid generic phrases and clichés; focus on specific strengths and accomplishments.  
+
+### Output Format ###
+
+Provide the professional summary as a standalone paragraph, ready to be placed at the top of a CV.

@@ -1,0 +1,174 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.90,top=0.7cm,bottom=0.7cm]{geometry}
+
+% CORRECTION ENCODAGE - Packages essentiels pour les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% Package pour copier/coller correct
+\usepackage{cmap}
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Reduce space between sections
+\renewcommand{\sectionskip}{\medskip}
+
+% Configuration des puces avec des anneaux colorés
+\newcommand{\ringbullet}{%
+  \tikz[baseline=-0.1ex]{
+    \draw[color1, line width=0.8pt] (0,0) circle (0.08cm);
+    \fill[color1] (0,0) circle (0.03cm);
+  }
+}
+
+\setlist[itemize]{
+    label=\ringbullet,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt
+}
+
+% Alternative: anneaux simples sans point central
+% \newcommand{\ringbullet}{\tikz[baseline=-0.1ex]{\draw[color1, line width=0.8pt] (0,0) circle (0.08cm);}}
+
+% Alternative: puces FontAwesome pour un look plus moderne (si préféré)
+% \setlist[itemize]{
+%     label=\textcolor{color1}{\faAngleRight},
+%     leftmargin=1.2em,
+%     itemsep=0pt,
+%     topsep=0pt,
+%     parsep=0pt
+% }
+
+\renewcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=TagColor!40,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+% Custom command to create left-aligned header
+\newcommand{\makeleftheader}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=0pt] at ([xshift=-0.9cm,yshift=-0.1cm]current page.north east) {
+    \includegraphics[width=2.8cm]{photo.png}
+  };
+    
+    % Title and info on the left
+    \node[anchor=north west,inner sep=0pt] at ([xshift=1cm,yshift=-1cm]current page.north west) {
+      \begin{minipage}{0.95\textwidth}
+        \raggedright
+        {\Huge\color{color1}\textbf{MAHFOUD YOUSSEF}} \\[0.5em]
+        {\Large\color{color2}Ingénieur IA \& Back-end} \\[1em]
+        
+          \faPhone & +33 7 45 50 23 49 
+          \faEnvelope & youssef.mahfoud@imt-atlantique.net
+          \faLinkedin & Youssef Mahfoud
+          \faMapMarker & Paris, France 
+    
+      \end{minipage}
+    };
+  \end{tikzpicture}
+  \vspace{2cm} % Adjust this space as needed
+}
+
+% Personal Information (keeping for compatibility but won't be used)
+\name{MAHFOUD}{Youssef}
+\phone[mobile]{+33 7 45 50 19 06}
+\email{mohamed.bachar.fr@gmail.com}
+\social[linkedin]{Mohamed BACHAR}
+\address{Paris, France}{}{}
+
+\begin{document}
+% Use custom header instead of \makecvtitle
+\makeleftheader
+
+\section{PROFIL}
+\small{ Ingénieur IA et logiciel industriel spécialisé dans la vision par ordinateur et la conception de réseaux de neurones, j’ai développé des solutions robustes en collecte de données réelles et mise en production de modèles complexes. Rapidement assimilateur et hautement intuitif, je recherche un poste à temps plein (CDI ou CDD à partir de septembre/octobre) pour mettre à profit mes compétences en Python, C++, PyTorch et en optimisation d’architectures dans des environnements exigeants. }
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+
+\cventry{Février 2025 — Présent}{Stage PFE Ingénieur IA \& Logiciel }{Dassault Systèmes 3DS - CATIA R\&D }{Vélizy-Villacoublay, France}{}{}
+\begin{itemize}
+
+
+\item{Développé un framework C++ natif pour la manipulation de maquettes complexes via 3DEXPERIENCE, optimisant la génération de données synthétiques pour l’entraînement IA.} 
+\item{Automatisé la production de plus de 10 000 rendus HD multi-vues avec export de métadonnées OpenGL, facilitant la validation visuelle des textures.} 
+\item{Implémenté un pipeline bidirectionnel sécurisé (WebSockets et REST) appliquant automatiquement les matériaux aux modèles 3D, éliminant des tâches manuelles critiques.}
+
+\end{itemize}
+
+\cventry{Juin 2024 – Août 2024}{Stage Ingénieur IA}{Centre International d'Intelligence Artificielle du Maroc - Ai Movement}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+??*5*?
+
+\end{itemize}
+
+\cventry{Juillet 2024 – Septembre 2024}{Stage Power BI \& IA Génerative}{TNC.Agency}{Casablanca, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Développé 3 tableaux de bord interactifs via Power BI en intégrant des pipelines ETL automatisés (Azure Data Factory, SQL Server, CSV, APIs) pour analyser les indicateurs clés (CPC, CTR, ROI) et diminuer de 70 \% le temps des analyses manuelles.} 
+\item{Implémenté des environnements IA (Stable Diffusion XL, Pony, FLUX) et co-conçu des workflows collaboratifs avec Adobe Photoshop et Illustrator, augmentant de 50 \% la productivité créative des équipes design.}
+
+\end{itemize}
+
+\cventry{Juillet 2023 – Août 2023}{Stage Conception \& Analyse de données}{LEAR Corporation}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Développé une pipeline en Python pour extraire des caractéristiques temporelles des signaux de collision et prédire l'indice de blessure (HIC) via Random Forest et SVR, réduisant de 15 \% les cycles de prototypage.} 
+\item{Conçu et simulé des composants plastiques en CAO (CATIA V5, Siemens NX) en optimisant la géométrie pour faciliter le moulage et garantir la conformité aux normes ISO 6487.}
+
+\end{itemize}
+
+\section{FORMATION}
+
+\cventry{Sep 2024 — Présent}{Master Informatique: Systèmes interactifs, intelligents et autonomes}{IMT-Atlantique, Bretagne INP-ENIB, UBO}{Brest, France}{}{}
+
+\cventry{Sep 2020 — Présent}{Cycle d'ingénieur en IA \& Data Science et le génie industriel}{École Nationale Supérieure d’Arts et Métiers}{Meknès, Maroc}{}{}
+
+\section{PROJETS ACADÉMIQUES}
+
+
+\cvitem{Amélioration AMDEC via \textbf{LMM multimodaux} | ENSAM et Université de Lund}{\textbf{LMM multimodaux}. Python. FastAPI. ASR temps réel}
+\cvitem{Guide Campus en Réalité Augmentée avec React, OpenCv et Vuforia | ENSAM}{Visual SLAM. \textbf{YOLO}. OpenCV. JavaScript}
+\cvitem{Simulation 3D d’essaim de drones en Godot | UBO}{Godot Engine. GDScript. recherche \textbf{A*}. Bullet Physics}
+\cvitem{Extraction automatisée de données de factures par OCR + LLM | ENSAM}{\textbf{PaddleOCR}. NER transformer. React. Python}
+
+
+
+\section{COMPÉTENCES}
+
+\cvtag{C++} \cvtag{Python} \cvtag{Rust} \cvtag{Bash} \cvtag{C\#} \cvtag{PyTorch} \cvtag{FastAPI} \cvtag{Docker} \cvtag{React} \cvtag{Flask} \cvtag{TensorFlow} \cvtag{Unity} \cvtag{Git} \cvtag{PostgreSQL} \cvtag{Redis} \cvtag{Communication} \cvtag{Créativité} \cvtag{Esprit d'équipe} \cvtag{YOLO} \cvtag{Faster R-CNN} \cvtag{DETR} \cvtag{RNN} \cvtag{Transformer} \cvtag{Data Augmentation} \cvtag{ROS} \cvtag{Quantization}
+
+
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+\section{LANGUES}
+\cvitem{}{Anglais — bilingue}
+\cvitem{}{Français — bilingue}
+\cvitem{}{Arabe — Langue maternelle}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\section{CERTIFICATIONS}
+\cvitem{}{Deep Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Machine Learning Specialization — Coursera | DeepLearning.AI}
+\cvitem{}{Analyze Data with Python — Codecademy}
+\end{minipage}
+
+\section{ACTIVITÉS PARASCOLAIRES}
+\cvitem{}{Président du club informatique Gadz'IT, ENSAM Meknès }
+\cvitem{}{Chef de la cellule Média \& IT du Club Robotique AM}
+\cvitem{}{Chef de la cellule CraftX \& Aerospace du Club Space AM}
+
+\end{document}
