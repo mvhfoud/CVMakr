@@ -1,0 +1,189 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.90,top=0.1cm,bottom=0.1cm]{geometry}
+
+% CORRECTION ENCODAGE - Packages essentiels pour les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% Package pour copier/coller correct
+\usepackage{cmap}
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Reduce space between sections
+\renewcommand{\sectionskip}{\medskip}
+
+% Configuration des puces avec des anneaux colorés
+\newcommand{\ringbullet}{%
+  \tikz[baseline=-0.1ex]{
+    \draw[color1, line width=0.8pt] (0,0) circle (0.08cm);
+    \fill[color1] (0,0) circle (0.03cm);
+  }
+}
+
+\setlist[itemize]{
+    label=\ringbullet,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt
+}
+
+% Alternative: anneaux simples sans point central
+% \newcommand{\ringbullet}{\tikz[baseline=-0.1ex]{\draw[color1, line width=0.8pt] (0,0) circle (0.08cm);}}
+
+% Alternative: puces FontAwesome pour un look plus moderne (si préféré)
+% \setlist[itemize]{
+%     label=\textcolor{color1}{\faAngleRight},
+%     leftmargin=1.2em,
+%     itemsep=0pt,
+%     topsep=0pt,
+%     parsep=0pt
+% }
+
+\renewcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=TagColor!40,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+% Custom command to create left-aligned header
+\newcommand{\makeleftheader}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=5pt] at ([xshift=-1cm,yshift=-0.5cm]current page.north east) {
+    \includegraphics[width=2.8cm]{photo.png}
+  };
+    
+    % Title and info on the left
+    \node[anchor=north west,inner sep=0pt] at ([xshift=1cm,yshift=-1cm]current page.north west) {
+      \begin{minipage}{0.95\textwidth}
+        \raggedright
+        {\Huge\color{color1}\textbf{MAHFOUD YOUSSEF}} \\[0.5em]
+        {\Large\color{color2}Ingénieur IA \& Logiciel} \\[1em]
+        \vspace{-2mm}
+        
+          \faPhone & +33 7 45 50 23 49 
+          \faEnvelope & youssef.mahfoud@imt-atlantique.net
+          \faLinkedin & Youssef Mahfoud
+          \faMapMarker & Paris, France 
+    
+      \end{minipage}
+    };
+  \end{tikzpicture}
+  \vspace{2cm} % Adjust this space as needed
+}
+
+% Personal Information (keeping for compatibility but won't be used)
+\name{MAHFOUD}{Youssef}
+\phone[mobile]{+33 7 45 50 23 49}
+\email{youssefmahartiste@gmail.com}
+\social[linkedin]{Youssef Mahfoud}
+\address{Paris, France}{}{}
+
+\begin{document}
+% Use custom header instead of \makecvtitle
+\makeleftheader
+
+\section{PROFIL}
+\small{ Ingénieur en IA et logiciel jeune diplômé, j'ai développé des solutions innovantes en C++ et Python, optimisé des modèles Deep Learning et conçu des applications conteneurisées avec Docker et Kubernetes. Rapidement apprenant et hautement intuitif, je recherche un poste à temps plein (CDI ou CDD début septembre/octobre) pour mettre à profit mes compétences en rédaction de brevets, analyse technique et veille technologique au sein d'équipes dynamiques. }
+\vspace{-3mm}
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+
+\cventry{Février 2025 — Présent}{Stage PFE Ingénieur IA \& Logiciel }{Dassault Systèmes 3DS - CATIA R\&D }{Vélizy-Villacoublay, France}{}{}
+\begin{itemize}
+
+
+
+\item{Conçu un framework C++ natif dans 3DEXPERIENCE en utilisant les Apis/Interfaces internes à DS pour charger et parcourir efficacement des assemblages 3D complexes (>20 instances), afin d’automatiser la génération d’un dataset de plus de 10000 rendus HD multi-vues (voitures, avions…) avec export JSON (caméras, lumières, masques) pour l’entraînement d’un modèle.} 
+\item{Entraîné 5 itérations de modèles Deep-Learning en PyTorch/CUDA pour construire un encodeur de matériaux à partir d’images 2D, en explorant et combinant plusieurs architectures (CNNs, ViTs, CBAM...), avec export ONNX, déploiement sécurisé via Docker \& Kubernetes, et intégration d’une recherche sémantique basée sur Qdrant avec le catalogue utilisateur.} 
+
+\item{Développé une solution d’accélération GPU en inférence par précision mixte, conteneurisée via Docker et orchestrée sur Kubernetes avec Helm, intégrant un backend FastAPI pour la recherche sémantique et le transfert fluide de matériaux entre ControlNet et 3DExperience dans les workflows CATIA.}
+
+\end{itemize}
+\vspace{2mm}
+
+
+\cventry{Juin 2024 – Août 2024}{Stage Ingénieur IA}{Centre International d'Intelligence Artificielle du Maroc - Ai Movement}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{implémenté NeRF-- en PyTorch/CUDA pour générer 800+ volumes compressés (.npz)} 
+\item{défini une loss 3D custom pour FasterRCNN entraînés sur annotations 2D. En utilisant un algorithme personnel pour la projection.} 
+
+\item{Développé et évalué un système de détection 3D sur imageries médicales en entraînant des réseaux de neurones sur mammographies et données synthétiques (ScanNet) pour atteindre un ΔAP@0,25 de 0,023, et conçu un pipeline modulaire avec tests unitaires et interface web d’annotation automatisée intégrant TensorBoard et Plotly.}
+
+\end{itemize}
+\vspace{2mm}
+
+\cventry{Juillet 2024 – Septembre 2024}{Stage Power BI \& IA Génerative}{TNC.Agency}{Casablanca, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Développé et automatisé 3 dashboards Power BI avec pipelines ETL/ELT via Azure Data Factory et DAX avancé, réduisant les analyses manuelles de 70 \%.} 
+\item{Orchestré des workflows d’IA générative sur Kubernetes avec déploiement en conteneurs Docker, augmentant la productivité créative de 50 \% et la satisfaction des designers de 30 \%.}
+
+\end{itemize}
+
+\cventry{Juillet 2023 – Août 2023}{Stage Conception \& Analyse de données}{LEAR Corporation}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Modélisé et optimisé des composants de sécurité en CAO et via un pipeline d’analyse collision (Python, Random Forest, SVR), réduisant de 15 \% les itérations physiques et automatisant la documentation technique (Excel, VBA), démontrant rigueur et innovation technique.}
+
+\end{itemize}
+\vspace{-3mm}
+
+\section{FORMATION}
+
+\cventry{Sep 2024 — Présent}{Master Informatique: Systèmes interactifs, intelligents et autonomes}{IMT-Atlantique, Bretagne INP-ENIB, UBO}{Brest, France}{}{}
+
+\cventry{Sep 2020 — Présent}{Cycle d'ingénieur en IA \& Data Science et le génie industriel}{École Nationale Supérieure d’Arts et Métiers}{Meknès, Maroc}{}{}
+
+\section{PROJETS ACADÉMIQUES}
+
+
+\cvitem{Extraction automatisée de données de factures par \textbf{OCR} + \textbf{LLM}}{PaddleOCR. NER transformer. Hugging Face. React}
+\cvitem{Amélioration AMDEC via \textbf{LMM multimodaux}}{LMM multimodaux. Python. FastAPI. ASR temps réel}
+\cvitem{Agent IA pour évaluation de correspondance d'offres d'emploi}{\textbf{OpenAI API}. Selenium. Parsing HTML. Extraction de compétences}
+\cvitem{Plateforme d’inférence ML \textbf{scalable} en production}{Django. Docker. Kubernetes. gRPC}
+
+
+\vspace{-3mm}
+
+\section{COMPÉTENCES}
+
+\cvtag{C++} \cvtag{Python} \cvtag{Bash} \cvtag{CUDA} \cvtag{GIT} \cvtag{PostgreSQL} \cvtag{Redis} \cvtag{FastAPI} \cvtag{Docker} \cvtag{Kubernetes} \cvtag{React} \cvtag{PyTorch} \cvtag{Power BI} \cvtag{Selenium} \cvtag{Autonomie} \cvtag{Rigueur} \cvtag{Veille technologique} \cvtag{Recherche brevetabilité} \cvtag{Anglais} \cvtag{Français} \cvtag{Machine Learning} \cvtag{Deep Learning} \cvtag{Patent drafting} \cvtag{EPO} \cvtag{PCT}
+
+
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{-4mm}
+
+\section{LANGUES}
+\cvitem{}{Anglais — bilingue}
+\cvitem{}{Français — bilingue}
+\cvitem{}{Arabe — Langue maternelle}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-4mm}
+
+\section{PARASCOLAIRE \& CERTIFICATIONS}
+\cvitem{}{Président du club informatique informatique | GADZ'IT}
+\cvitem{}{Chef de la cellule médiatisation et IT | ADE Ensam }
+\cvitem{}{Chef de la cellule Infographie et IT | Club Robotique AM }
+\cvitem{}{Deep Learning Specialization — Coursera | DeepLearning.AI}
+
+\end{minipage}
+
+
+
+\end{document}

@@ -1,0 +1,187 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.90,top=0.1cm,bottom=0.1cm]{geometry}
+
+% CORRECTION ENCODAGE - Packages essentiels pour les accents
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% Package pour copier/coller correct
+\usepackage{cmap}
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Reduce space between sections
+\renewcommand{\sectionskip}{\medskip}
+
+% Configuration des puces avec des anneaux colorés
+\newcommand{\ringbullet}{%
+  \tikz[baseline=-0.1ex]{
+    \draw[color1, line width=0.8pt] (0,0) circle (0.08cm);
+    \fill[color1] (0,0) circle (0.03cm);
+  }
+}
+
+\setlist[itemize]{
+    label=\ringbullet,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt
+}
+
+% Alternative: anneaux simples sans point central
+% \newcommand{\ringbullet}{\tikz[baseline=-0.1ex]{\draw[color1, line width=0.8pt] (0,0) circle (0.08cm);}}
+
+% Alternative: puces FontAwesome pour un look plus moderne (si préféré)
+% \setlist[itemize]{
+%     label=\textcolor{color1}{\faAngleRight},
+%     leftmargin=1.2em,
+%     itemsep=0pt,
+%     topsep=0pt,
+%     parsep=0pt
+% }
+
+\renewcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=TagColor!40,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+% Custom command to create left-aligned header
+\newcommand{\makeleftheader}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=5pt] at ([xshift=-1cm,yshift=-0.5cm]current page.north east) {
+    \includegraphics[width=2.8cm]{photo.png}
+  };
+    
+    % Title and info on the left
+    \node[anchor=north west,inner sep=0pt] at ([xshift=1cm,yshift=-1cm]current page.north west) {
+      \begin{minipage}{0.95\textwidth}
+        \raggedright
+        {\Huge\color{color1}\textbf{MAHFOUD YOUSSEF}} \\[0.5em]
+        {\Large\color{color2}Ingénieur IA \& Logiciel} \\[1em]
+        \vspace{-2mm}
+        
+          \faPhone & +33 7 45 50 23 49 
+          \faEnvelope & youssef.mahfoud@imt-atlantique.net
+          \faLinkedin & Youssef Mahfoud
+          \faMapMarker & Paris, France 
+    
+      \end{minipage}
+    };
+  \end{tikzpicture}
+  \vspace{2cm} % Adjust this space as needed
+}
+
+% Personal Information (keeping for compatibility but won't be used)
+\name{MAHFOUD}{Youssef}
+\phone[mobile]{+33 7 45 50 23 49}
+\email{youssefmahartiste@gmail.com}
+\social[linkedin]{Youssef Mahfoud}
+\address{Paris, France}{}{}
+
+\begin{document}
+% Use custom header instead of \makecvtitle
+\makeleftheader
+
+\section{PROFIL}
+\small{ Ingénieur logiciel spécialisé en intelligence artificielle avec une solide expertise en optimisation de systèmes complexes et développement de solutions logicielles évolutives. Rapide apprenant et doté d'une forte intuition technique, je maîtrise la configuration de plateformes logicielles et les analyses techniques, économiques et réglementaires dans le domaine énergétique. Je recherche un poste CDI ou CDD dès novembre pour contribuer efficacement à des projets innovants dans la transition énergétique. }
+\vspace{-3mm}
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+
+
+\cventry{Février 2025 — Présent}{Ingénieur IA \& Logiciel - Assistant IA pour le transfert des matériaux Generé par l'IA à la 3Dexperience (Intern)}{Dassault Systèmes 3DS - Service R\&D CATIA  }{Vélizy-Villacoublay, France}{}{}
+\begin{itemize}
+
+
+\item{Conçu et implémenté un framework C++ natif dans 3DEXPERIENCE, automatisant la génération de +10 000 rendus HD multi-vues et l'export JSON pour l'entraînement de modèles IA.} 
+\item{Entraîné et optimisé 5 itérations de modèles deep learning (PyTorch/CUDA) combinant CNN, ViT et CBAM, avec export ONNX et intégration dans un pipeline de recherche sémantique (Qdrant + PostgreSQL).} 
+\item{Déployé une inférence GPU accélérée, conteneurisée via Docker et orchestrée sur Kubernetes avec Helm, garantissant un backend FastAPI scalable et une intégration fluide aux workflows industriels.}
+
+\end{itemize}
+\vspace{2mm}
+
+
+\cventry{Juin 2024 – Août 2024}{Ingénieur Chercheur en IA \& Logiciel - Detection 3D des tumeurs cancereuses (Intern)}{Centre International d'Intelligence Artificielle du Maroc - Ai Movement}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Développé un pipeline NeRF en PyTorch/CUDA générant plus de 800 volumes compressés à partir d'imageries médicales et de données synthétiques, renforçant la reproductibilité des processus analytiques.} 
+\item{Optimisé la détection 3D en définissant une fonction de perte personnalisée pour Faster R-CNN, augmentant la précision de détection de +2.3\% (ΔAP@0.25).} 
+\item{Conçu une bibliothèque modulaire en Python/C++ intégrée à des outils de visualisation (TensorBoard et Plotly) pour le suivi des entraînements et la comparaison inter-modèles.}
+
+\end{itemize}
+\vspace{2mm}
+
+\cventry{Juillet 2024 – Septembre 2024}{Stage en Power BI \& IA Génerative}{TNC.Agency}{Casablanca, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Conçu et déployé 3 dashboards Power BI et des pipelines ETL via Azure Data Factory pour optimiser l'analyse des performances (CPC, CTR, ROI) avec une réduction de 70\% des tâches manuelles.} 
+\item{Développé et orchestré des workflows d'intelligence artificielle générative sur Kubernetes et Docker pour Stable Diffusion XL, Pony et FLUX, augmentant de 50\% la productivité créative et la satisfaction des designers de 30\%.}
+
+\end{itemize}
+
+\cventry{Juillet 2023 – Août 2023}{Ingénieur en Conception \& Analyse de données (Inten)}{LEAR Corporation}{Rabat, Maroc}{}{}
+\begin{itemize}
+
+
+\item{Optimisé la modélisation et simulation de composants de sécurité via CATIA V5 et Python, réduisant de 15 \% les itérations physiques et développant un pipeline d’analyse prédictif (Random Forest, SVR, export ONNX) en vue d’améliorer la performance et la conformité, compétences transférables aux environnements EMS et PMS.}
+
+\end{itemize}
+\vspace{-3mm}
+
+\section{FORMATION}
+
+\cventry{Sep 2024 — Présent}{Double diplôme Master en Informatique: Systèmes interactifs, intelligents et autonomes}{IMT-Atlantique, Bretagne INP-ENIB, UBO}{Brest, France}{}{}
+
+\cventry{Sep 2020 — Présent}{Cycle d'ingénieur en IA \& Data Science et le génie industriel}{École Nationale Supérieure d’Arts et Métiers}{Meknès, Maroc}{}{}
+
+\section{PROJETS ACADÉMIQUES}
+
+
+\cvitem{Extraction automatisée de données de factures par \textbf{OCR} + \textbf{LLM}}{\textbf{PaddleOCR}. \textbf{NER transformer}. React. Python}
+\cvitem{Pipeline de traitement de données streaming pour IoT}{\textbf{Apache Kafka}. \textbf{Spark Structured Streaming}. Python. Docker}
+\cvitem{MLOps \& Feature Store pour scoring prédictif}{\textbf{Feast}. \textbf{Apache Airflow}. Kubernetes. Terraform}
+\cvitem{Plateforme d’inférence ML scalable en production}{Django. Docker. \textbf{Kubernetes}. \textbf{gRPC}}
+
+
+\vspace{-3mm}
+
+\section{COMPÉTENCES}
+
+\cvtag{C++} \cvtag{Python} \cvtag{Bash} \cvtag{CUDA} \cvtag{GIT} \cvtag{FASTAPI} \cvtag{React} \cvtag{Docker} \cvtag{Kubernetes} \cvtag{PostgreSQL} \cvtag{Redis} \cvtag{Pytorch} \cvtag{Power BI} \cvtag{Apache Kafka} \cvtag{Terraform} \cvtag{Amazon Web Services} \cvtag{Google Cloud Platform} \cvtag{MQTT} \cvtag{OPC UA} \cvtag{pandas} \cvtag{NumPy} \cvtag{MATLAB} \cvtag{Simulink} \cvtag{Jupyter Notebook} \cvtag{Microsoft Excel}
+
+
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{-4mm}
+
+\section{LANGUES}
+\cvitem{}{Anglais — bilingue}
+\cvitem{}{Français — bilingue}
+\cvitem{}{Arabe — Langue maternelle}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-4mm}
+
+\section{PARASCOLAIRE \& CERTIFICATIONS}
+\cvitem{}{Président du club informatique informatique | GADZ'IT}
+\cvitem{}{Chef de la cellule médiatisation et IT | ADE Ensam }
+\cvitem{}{Chef de la cellule Infographie et IT | Club Robotique AM }
+\cvitem{}{Deep Learning Specialization — Coursera | DeepLearning.AI}
+
+\end{minipage}
+
+
+
+\end{document}

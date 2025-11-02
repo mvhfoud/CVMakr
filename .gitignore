@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.py.class
+.pytest_cache/
+.mypy_cache/
+
+# Environments & tooling
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
+
+# Streamlit / cache
+.streamlit/
+
+# Credentials & tokens
+token.json
+credentials.json
+
+# Logs & metrics
+data/logs/
+
+# Generated artefacts
+resume/
+tmp/
+data/output/
+data/**/*.pdf
+data/**/*.tex
+*.pdf
+
+# Personal content files
+data/content/Experience_*.txt
+data/content/personalaspirations.txt
+data/content/ex*perience*.txt
+data/content/projects.txt
+
+# Misc
+*.sqlite
+*.db
+*.log
